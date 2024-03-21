@@ -1,0 +1,34 @@
+@media (max-width: 470px) {
+  .pages {
+    padding: 0;
+  }
+}
+@media (max-width: 960px) {
+  .home {
+    gap: 2rem;
+    grid-template-columns: 2fr 1fr;
+  }
+}
+@media (max-width: 675px) {
+  .home {
+    gap: 2rem;
+    grid-template-columns: 1.5fr 1fr;
+  }
+}
+@media (max-width: 570px) {
+  .create {
+    display: none;
+  }
+  .home {
+    grid-template-columns: 1fr;
+  }
+  nav {
+    display: none;
+  }
+  .nav-con {
+    display: flex;
+  }
+  .create-sm {
+    display: block;
+  }
+}
