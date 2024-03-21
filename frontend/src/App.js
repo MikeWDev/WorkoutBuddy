@@ -1,4 +1,3 @@
-require("dotenv").config();
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useAuthContext } from "./hooks/useAuthContext";
 import Home from "./Pages/Home";
@@ -7,9 +6,10 @@ import Login from "./Pages/Login";
 import Signup from "./Pages/Signup";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+
 function App() {
   const firebaseConfig = {
-    apiKey: `${process.env.FIREBASE_SECRET}`,
+    apiKey: `${process.env.REACT_APP_FIREBASE_SECRET}`,
     authDomain: "workoutbuddy-575d5.firebaseapp.com",
     projectId: "workoutbuddy-575d5",
     storageBucket: "workoutbuddy-575d5.appspot.com",
@@ -17,9 +17,11 @@ function App() {
     appId: "1:31814171225:web:bba4254d5e4941718a0f48",
     measurementId: "G-KNK4EZ9WVC",
   };
+
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
   const { user } = useAuthContext();
+
   return (
     <div className="App">
       <BrowserRouter>
