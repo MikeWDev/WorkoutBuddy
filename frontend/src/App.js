@@ -1,3 +1,4 @@
+require("dotenv").config();
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useAuthContext } from "./hooks/useAuthContext";
 import Home from "./Pages/Home";
@@ -8,7 +9,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 function App() {
   const firebaseConfig = {
-    apiKey: "AIzaSyBY-wiVhWmMDrRd9_yKl04mFrnPTTxY-Fo",
+    apiKey: `${process.env.FIREBASE_SECRET}`,
     authDomain: "workoutbuddy-575d5.firebaseapp.com",
     projectId: "workoutbuddy-575d5",
     storageBucket: "workoutbuddy-575d5.appspot.com",
