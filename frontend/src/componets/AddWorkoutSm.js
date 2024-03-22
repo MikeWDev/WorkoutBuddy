@@ -14,6 +14,7 @@ const AddWorkoutSm = ({ visible, setVisible }) => {
   const [emptyFields, setEmptyFields] = useState([]);
 
   console.log(visible.form);
+  const serverUrl = process.env.REACT_APP_SERVER_URL;
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -24,7 +25,7 @@ const AddWorkoutSm = ({ visible, setVisible }) => {
 
     const workout = { title, load, reps };
 
-    const response = await fetch("/api/workouts", {
+    const response = await fetch(`${serverUrl}/api/workouts`, {
       method: "POST",
       body: JSON.stringify(workout),
       headers: {

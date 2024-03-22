@@ -8,8 +8,8 @@ const WorkoutDetails = ({ workout }) => {
     if (!user) {
       return;
     }
-
-    const response = await fetch("/api/workouts/" + workout._id, {
+    const serverUrl = process.env.REACT_APP_SERVER_URL;
+    const response = await fetch(`${serverUrl}/api/workouts/` + workout._id, {
       method: "DELETE",
       headers: {
         Authorization: `Bearer ${user.token}`,
