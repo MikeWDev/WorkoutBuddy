@@ -13,35 +13,37 @@ const Signup = () => {
   };
 
   return (
-    <form className="signup" onSubmit={handleSubmit}>
-      <h3>Sign up</h3>
-      <div className="input">
-        <label htmlFor="">Email</label>
-        <input
-          type="email"
-          onChange={(e) => setEmail(e.target.value)}
-          value={email}
-        />
-      </div>
-      <div className="input">
-        <label htmlFor="">Password</label>
-        <input
-          type="password"
-          onChange={(e) => setPassword(e.target.value)}
-          value={password}
-        />
-      </div>
-      <div className="button-con">
-        <p>
-          Already have an account?{"    "}
-          <span>
-            Log in <Link to="/login"> here</Link>
-          </span>
-        </p>
-        <button disabled={isLoading}>Sign up</button>
-        {error && <div className="error">{error}</div>}
-      </div>
-    </form>
+    <div className="signup-con">
+      <form className="signup" onSubmit={handleSubmit}>
+        <h3>Sign up</h3>
+        <div className="input">
+          <label htmlFor="">Email</label>
+          <input
+            type="email"
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+          />
+        </div>
+        <div className="input">
+          <label htmlFor="">Password</label>
+          <input
+            type="password"
+            onChange={(e) => setPassword(e.target.value)}
+            value={password}
+          />
+        </div>
+        <div className="button-con">
+          <p>
+            Already have an account?{"    "}
+            <span>
+              Log in <Link to="/login"> here</Link>
+            </span>
+          </p>
+          <button disabled={isLoading}>Sign up</button>
+          {error && <div className="error">{error}</div>}
+        </div>
+      </form>
+    </div>
   );
 };
 
