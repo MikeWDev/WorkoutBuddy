@@ -10,12 +10,12 @@ import { getAnalytics } from "firebase/analytics";
 function App() {
   const firebaseConfig = {
     apiKey: `${process.env.REACT_APP_FIREBASE_SECRET}`,
-    authDomain: "workoutbuddy-575d5.firebaseapp.com",
-    projectId: "workoutbuddy-575d5",
-    storageBucket: "workoutbuddy-575d5.appspot.com",
-    messagingSenderId: "31814171225",
-    appId: "1:31814171225:web:bba4254d5e4941718a0f48",
-    measurementId: "G-KNK4EZ9WVC",
+    authDomain: "workoutbuddy-f9020.firebaseapp.com",
+    projectId: "workoutbuddy-f9020",
+    storageBucket: "workoutbuddy-f9020.appspot.com",
+    messagingSenderId: "924455778709",
+    appId: "1:924455778709:web:ac6c24825166d585ec1e9c",
+    measurementId: "G-PDS8GXDZG5",
   };
 
   const app = initializeApp(firebaseConfig);

@@ -13,6 +13,7 @@ const Home = () => {
   useEffect(() => {
     const fetchWorkouts = async () => {
       setIsLoading(true);
+      console.log(Loading);
       const serverUrl = process.env.REACT_APP_SERVER_URL;
       const response = await fetch(`${serverUrl}/api/workouts`, {
         headers: {
