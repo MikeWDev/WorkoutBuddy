@@ -17,6 +17,9 @@ html {
 header {
   background: #fff;
 }
+.disabled {
+  background-color: #555;
+}
 header .container {
   max-width: 140rem;
   margin: 0 auto;
@@ -295,4 +298,19 @@ header {
 }
 .ex-field span {
   font-weight: bold;
+}
+/*Loading component*/
+
+.loading-con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.loading-gif img {
+  height: 30%;
+}
+.loading-message {
+  font-size: 2.4rem;
+  position: absolute;
 }

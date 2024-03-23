@@ -42,7 +42,12 @@ const Login = () => {
               <Link to="/signup"> here</Link>
             </span>
           </p>
-          <button disabled={isLoading}>Log in</button>
+          <button
+            disabled={isLoading}
+            className={isLoading === true ? "disabled" : " "}
+          >
+            Log in
+          </button>
           {error && <div className="error">{error}</div>}
         </div>
       </form>
