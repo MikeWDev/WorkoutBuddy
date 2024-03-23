@@ -18,7 +18,9 @@ const Login = () => {
     <div className="login-con">
       {" "}
       <form className="signup" onSubmit={handleSubmit}>
-        <h3>Log in</h3>
+        <h3>
+          Log <span>in</span>
+        </h3>
         <div className="input">
           <label htmlFor="">Email</label>
           <input

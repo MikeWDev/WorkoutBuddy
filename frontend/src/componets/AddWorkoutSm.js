@@ -13,7 +13,6 @@ const AddWorkoutSm = ({ visible, setVisible }) => {
   const [error, setError] = useState(null);
   const [emptyFields, setEmptyFields] = useState([]);
 
-  console.log(visible.form);
   const serverUrl = process.env.REACT_APP_SERVER_URL;
   const handleSubmit = async (e) => {
     e.preventDefault();

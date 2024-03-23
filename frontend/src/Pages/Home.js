@@ -8,12 +8,10 @@ import Loading from "../componets/Loading";
 const Home = () => {
   const { workouts, dispatch } = useWorkoutsContext();
   const { user } = useAuthContext();
-  const [isLoading, setIsLoading] = useState();
-
+  const [isLoading, setIsLoading] = useState(true);
+  console.log(isLoading);
   useEffect(() => {
     const fetchWorkouts = async () => {
-      setIsLoading(true);
-      console.log(Loading);
       const serverUrl = process.env.REACT_APP_SERVER_URL;
       const response = await fetch(`${serverUrl}/api/workouts`, {
         headers: {
@@ -24,11 +22,11 @@ const Home = () => {
 
       if (response.ok) {
         dispatch({ type: "SET_WORKOUTS", payload: json });
+        setIsLoading(false);
       }
     };
     if (user) {
       fetchWorkouts();
-      setIsLoading(false);
     }
   }, [dispatch, user]);
 

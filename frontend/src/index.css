@@ -300,7 +300,9 @@ header {
   font-weight: bold;
 }
 /*Loading component*/
-
+.signup h3 span {
+  color: var(--primary);
+}
 .loading-con {
   display: flex;
   flex-direction: column;
