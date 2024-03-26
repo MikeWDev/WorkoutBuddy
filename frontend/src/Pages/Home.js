@@ -33,7 +33,9 @@ const Home = () => {
   return (
     <div className="home">
       {isLoading === true ? (
-        <Loading />
+        <div className="loading-container">
+          <Loading />
+        </div>
       ) : (
         <div className="workouts">
           {workouts &&
